@@ -1,0 +1,19 @@
+{
+	"name": "testDataset",
+	"properties": {
+		"description": "tsetsetestesttstset",
+		"linkedServiceName": {
+			"referenceName": "AzureStorageLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"fileName": {
+				"value": "@CONCAT(pipeline().RunId, '.txt')",
+				"type": "Expression"
+			},
+			"folderPath": "adftutorial/output"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
